@@ -1,9 +1,9 @@
 {
-  "name": "angular2-quickstart",
-  "description": "Angular2 seed project based on official quickstart.",
+  "name": "bridge-score",
+  "description": "Manage bridge tournament scores.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamninja/angular2-quickstart-tutorial"
+    "url": "https://github.com/iamninja/bridge-score"
   },
   "version": "0.0.1",
   "scripts": {
