@@ -1,1 +1,6 @@
 <h3>Tournaments List</h3>
+<ul *ngFor="let tour of tournes | async">
+  <li class="">
+    {{ tour.$value }}
+  </li>
+</ul>

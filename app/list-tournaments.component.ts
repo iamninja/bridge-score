@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'list-tournaments',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   ]
 })
 export class ListTournamentsComponent {
-
+  tournes: FirebaseListObservable<any[]>;
+  constructor(af: AngularFire) {
+    this.tournes = af.database.list('/');
+  }
 }
