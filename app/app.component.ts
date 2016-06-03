@@ -1,8 +1,11 @@
-import { Component }                                        from '@angular/core';
+import { Component, OnInit }                                from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
+import { TournamentService }        from './tournament.service';
 import { NewTournamentComponent }   from './new-tournament.component';
 import { ListTournamentsComponent } from './list-tournaments.component';
+
+import { Tournament } from './tournament';
 
 @Component({
   selector: 'my-app',
@@ -11,7 +14,10 @@ import { ListTournamentsComponent } from './list-tournaments.component';
     'app/app.component.css'
   ],
   directives: [ ROUTER_DIRECTIVES ],
-  providers: [ ROUTER_PROVIDERS ]
+  providers: [
+    ROUTER_PROVIDERS,
+    TournamentService
+  ]
 })
 @RouteConfig([
   {
@@ -25,6 +31,16 @@ import { ListTournamentsComponent } from './list-tournaments.component';
     component: ListTournamentsComponent
   }
 ])
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Bridge Score';
+  // tournaments;
+
+  constructor(private tournamentService: TournamentService) { }
+
+  // getTournaments() {
+  //   this.tournaments = this.tournamentService.getTournaments();
+  // }
+  ngOnInit() {
+    // this.getTournaments();
+  }
 }
