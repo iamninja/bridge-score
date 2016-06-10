@@ -4,6 +4,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
 import { TournamentService }        from './tournament.service';
 import { NewTournamentComponent }   from './new-tournament.component';
 import { ListTournamentsComponent } from './list-tournaments.component';
+import { EditTournamentComponent }  from './edit-tournament.component';
 
 import { Tournament } from './tournament';
 
@@ -29,6 +30,11 @@ import { Tournament } from './tournament';
     path: '/list',
     name: 'ListTournaments',
     component: ListTournamentsComponent
+  },
+  {
+    path: '/edit/:key',
+    name: 'EditTournament',
+    component: EditTournamentComponent
   }
 ])
 export class AppComponent implements OnInit {

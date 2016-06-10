@@ -1,6 +1,7 @@
 <h3>Tournaments List</h3>
 <ul *ngFor="let tour of tournes | async">
   <li class="">
-    {{ tour.$value }}
+    {{ tour.type }} - {{ tour.deals }} - {{ tour.id }} - {{ tour.$key }}
+    <a href="edit/{{ tour.$key }}">Edit</a>
   </li>
 </ul>

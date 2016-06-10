@@ -1,1 +1,27 @@
 <h3>Create New Tournament</h3>
+<div>
+  <label>Date: </label>
+  <input [(ngModel)]="aNewTournament.date" placeholder="type">
+</div>
+<div>
+  <label>Place: </label>
+  <input [(ngModel)]="aNewTournament.place" placeholder="type">
+</div>
+<div>
+  <label>Referee: </label>
+  <input [(ngModel)]="aNewTournament.referee" placeholder="type">
+</div>
+<div>
+  <label>Type: </label>
+  <input [(ngModel)]="aNewTournament.type" placeholder="type">
+</div>
+<div>
+  <label>Format: </label>
+  <input [(ngModel)]="aNewTournament.format" placeholder="format">
+</div>
+<div>
+  <label>Deals: </label>
+  <input [(ngModel)]="aNewTournament.deals" placeholder="deals">
+</div>
+
+<button (click)="saveTournament()">Save</button>

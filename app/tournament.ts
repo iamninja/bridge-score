@@ -3,9 +3,12 @@ import { Score }  from './score';
 
 // Define tournament class
 export class Tournament {
-  _id: string;
+  id: string;
   name: string;
+  date: string;
   type: string;
+  place: string;
+  referee: string;
   format: string;
   deals: number;
   scores: Score[];
